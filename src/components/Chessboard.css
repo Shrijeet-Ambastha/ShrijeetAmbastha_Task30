@@ -1,0 +1,80 @@
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: system-ui, sans-serif;
+}
+
+.status-bar {
+  margin-bottom: 20px;
+  height: 60px;
+}
+
+.player-badge {
+  padding: 4px 10px;
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 65px);
+  grid-template-rows: repeat(8, 65px);
+  border: 5px solid #2c3e50;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.square {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.light { background-color: #f0d9b5; }
+.dark { background-color: #b58863; }
+
+.square.selected {
+  background-color: #7b9c60 !important;
+}
+
+.square.check-alert {
+  background-color: #e74c3c !important;
+}
+
+.move-dot {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(46, 204, 113, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+}
+
+.piece {
+  font-size: 46px;
+  z-index: 2;
+  transition: transform 0.1s ease;
+}
+
+.square:hover .piece {
+  transform: scale(1.08);
+}
+
+.reset-btn {
+  padding: 8px 16px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+.reset-btn:hover { background: #219653; }
